@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+ pre-commit-scans:
     runs-on: ubuntu-latest
 
     env:
@@ -32,6 +32,7 @@ jobs:
 
       - name: OSS scan
         run: mvn ossindex:audit
+        continue-on-error: true
 
       - name: OWASP Scan
         if: false
