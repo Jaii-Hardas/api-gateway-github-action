@@ -23,6 +23,6 @@ jobs:
       uses: actions/checkout@v4
 
     - name: check setup
-      run:
+      run: |
         java --version
         ls -ltr
